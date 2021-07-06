@@ -72,10 +72,12 @@ getgenv().NETWORKOWNER =
     function()
         -- Revoke ownership from others
         for Plr, _ in pairs(PlayerList) do
+            Plr.MaximumSimulationRadius = 0
             Plr.SimulationRadius = 0
         end
 
         -- Claim ownership for me
+        game.Players.LocalPlayer.MaximumSimulationRadius = NETWORK_RADIUS
         game.Players.LocalPlayer.SimulationRadius = NETWORK_RADIUS
     end
 )
