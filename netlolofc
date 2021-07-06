@@ -71,6 +71,7 @@ getgenv().NETWORKOWNER =
     function()
         -- Revoke ownership from others
         for Plr, _ in pairs(PlayerList) do
+            sethiddenprop(Plr, "MaximumSimulationRadius", 0)
             sethiddenprop(Plr, "SimulationRadius", 0)
         end
 
