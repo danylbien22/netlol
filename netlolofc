@@ -76,7 +76,7 @@ getgenv().NETWORKOWNER =
         end
 
         -- Claim ownership for me
-        setsimulationrad(NETWORK_RADIUS, NETWORK_RADIUS)
+        setsimulationrad(NETWORK_RADIUS)
     end
 )
 
