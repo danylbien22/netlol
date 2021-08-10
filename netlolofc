@@ -1,4 +1,3 @@
-local PlayerInstance
 local sethiddenprop = (sethiddenproperty or set_hidden_property or sethiddenprop or set_hidden_prop)
 local setsimulationrad = setsimulationradius or set_simulation_radius or function(Radius)
         sethiddenprop(PlayerInstance, "SimulationRadius", Radius)
@@ -22,7 +21,7 @@ end
 -- Grab services
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
-PlayerInstance = Players.LocalPlayer
+local PlayerInstance = Players.LocalPlayer
 
 -- Optimize
 local PlayerList = {}
