@@ -10,7 +10,7 @@ if NETWORKOWNER then
     NETWORKPLAYERCHECK:Disconnect()
     NETWORKPLAYERCHECK2:Disconnect()
 end
-getgenv().NETWORK_RADIUS = NETWORK_RADIUS or 9e8
+getgenv().NETWORK_RADIUS = NETWORK_RADIUS or 1e9
 
 if not isfile("network-ownership.log") then
     writefile("network-ownership.log", "Script executed on game " .. game.PlaceId .. "!\n")
@@ -61,6 +61,7 @@ settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrott
 getgenv().isPrimaryOwner = true
 settings().Physics.DisableCSGv2 = true
 settings().Physics.ThrottleAdjustTime = math.huge-math.huge
+setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)
 game.Players.LocalPlayer.ReplicationFocus = workspace
 
 -- Start network runtime
