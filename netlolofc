@@ -69,7 +69,7 @@ getgenv().NETWORKOWNER =
     function()
         -- Revoke ownership from others
         for Plr, _ in pairs(PlayerList) do
-            sethiddenprop(Plr, "SimulationRadius", 0)
+            sethiddenprop(Plr, "SimulationRadius", 0.1)
         end
 
         -- Claim ownership for me
