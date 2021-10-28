@@ -74,7 +74,7 @@ getgenv().NETWORKOWNER =
         end
 
         -- Claim ownership for me
-        setsimulationrad(NETWORK_RADIUS)
+        sethiddenprop(PlayerInstance, "SimulationRadius", 1000)
     end
 )
 
